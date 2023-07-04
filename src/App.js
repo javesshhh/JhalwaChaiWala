@@ -6,7 +6,7 @@ import "./Styles/misc.scss";
 import "./Styles/mediaQuery.scss";
 import { useEffect, useState } from "react";
 import Footer from "./Components/Footer";
-
+import Loader from "./Components/Loader";
 import IntroVideo from "./Components/IntroVideo";
 import Section from "./Components/Section";
 import freshTopicSrc from "./Assets/academy.png";
@@ -72,6 +72,7 @@ function App() {
 
   return (
     <>
+    {loading && <Loader />}
       <IntroVideo />
       <Section
         h3={freshTopic.heading}
